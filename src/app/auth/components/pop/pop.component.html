@@ -1,0 +1,20 @@
+<div *ngIf="ispopupopen" id="all">
+<mat-dialog-content>
+    <div id="img">
+    <img src="https://www.pngitem.com/pimgs/m/504-5040528_empty-profile-picture-png-transparent-png.png">
+    </div>
+    <div *ngFor="let us of readData" id="pop">
+        <div id="name">
+            <p>Name : </p>
+            <p>{{us.name}}</p>
+        </div>
+        <div id="email">
+            <p>Email : </p>
+            <p>{{us.email}}</p>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions id="click">
+        <button mat-dialog-close class="btn btn-primary" (click)="update()" > Update </button>
+</mat-dialog-actions>
+</div>

@@ -1,0 +1,19 @@
+<div id="all">
+    <!-- <div id="logo">
+<img [class.mat-elevation-z8]="isActive" width="1920" height="644" src="https://seppam.com/wp-content/uploads/2023/08/seppam-new-black-01.png" class="attachment-full lazyloaded" alt="" data-src="https://seppam.com/wp-content/uploads/2023/08/seppam-new-black-01.png" decoding="async">
+</div> -->
+    <div id="main">
+        <div id="container" [class.mat-elevation-z8]="isActive">
+            <div class="container1">
+                <label>New User Please Register</label><br>
+                <button mat-raised-button id="btn" [routerLink]="['/register']">Register</button>
+            </div><br>
+            <div class="container2">
+                <label>Already have an Account? Please Login </label><br>
+                <button mat-raised-button id="btn" routerLink="/login" (click)="loading()">
+                    <span *ngIf="progress" class="spinner-border spinner-border-sm mr-1"></span>
+                    Login</button>
+            </div>
+        </div>
+    </div>
+</div>

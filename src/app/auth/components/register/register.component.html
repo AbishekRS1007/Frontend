@@ -1,0 +1,184 @@
+<mat-tab-group backgroundColor="primary">
+    <mat-tab label="Basic" class="tab">
+        <div id="basic">
+        <form [formGroup]="userForm">
+            <div id="firstrow">
+                <div id="RegistrationBox" [class.mat-elevation-z8]="isActive">
+                    <div>
+                        <h5 id="Registration"> Registration </h5>
+                    </div>
+                    <div id="Customername">
+                        <label> Customer name : </label>
+                        <input type="text" placeholder="Enter the Customer name" formControlName="name" required>
+                    </div>
+                    <div id="Address">
+                        <label> Address : </label>
+                        <input type="text" placeholder="Enter the Address "  required>
+                    </div>
+                    <div id="Email" >
+                        <label> Email : </label>
+                        <input type="email" placeholder="Enter the Email" [readOnly]="isDisable" formControlName="email" required >
+                    </div>
+                    <div id="pass">
+                        <label> Create Password : </label>
+                        <input type="password" placeholder="Enter the new Password " formControlName="password" required>
+                    </div>
+                    <div id="Domainname">
+                        <label> Domain name : </label>
+                        <input type="text" placeholder="Enter the Domain name " formControlName="domain_name" required>
+                    </div>
+                </div>
+
+                <div id="AdministratorDetailsBox" [class.mat-elevation-z8]="isActive">
+                    <h5 id="administration"> Administrator Details </h5>
+                    <div>
+                        <label> Admin name : </label>
+                        <input type="text" placeholder="Enter the Admin name" required>
+                    </div>
+                    <div>
+                        <label> Admin User / email ID : </label>
+                        <input type="text" placeholder="Enter the Admin userId " required>
+                    </div>
+                    <div>
+                        <label> Admin Password : </label>
+                        <input type="text" placeholder="Enter the Admin Password" required>
+                    </div>
+                    <div>
+                        <label> Contact number : </label>
+                        <input type="text" placeholder="Enter the Admin Contact " required>
+                    </div>
+                </div>
+            </div>
+
+            <div id="secondrow">
+                <div id="ModuleSelectionBox" [class.mat-elevation-z8]="isActive">
+                    <h5 id="module"> Module Selection </h5>
+                    <div>
+                        <label>Process</label>
+                        <input type="checkbox" (click)="checkProcess()">
+                    </div>
+                    <div>
+                        <label> Albums</label>
+                        <input type="checkbox" (click)="checkAlbum()" >
+                    </div>
+                    <div>
+                        <label> Otobox </label>
+                        <input type="checkbox" (click)="checkOto()" >
+                    </div>
+                    <div>
+                        <label> VMS </label>
+                        <input type="checkbox" (click)="checkVms()" >
+                    </div>
+                    <div>
+                        <label> Tally </label>
+                        <input type="checkbox" (click)="checkTally()" >
+                    </div>
+                </div>
+
+                <div id="SubcriptionPeriod" [class.mat-elevation-z8]="isActive">
+                    <h5 id="subscription"> Subcription Period </h5>
+                    <div id="sub">
+                        <div id="d1">
+                            <div id="f1">
+                                <label>From : <input type="date"></label>
+                            </div>
+                            <div id="t1">
+                                <label>To : <br> <input type="date" placeholder="To"></label>
+                            </div>
+                        </div>
+                        <div id="d2">
+                            <div id="f2">
+                                <label>From : <input type="date"></label>
+                            </div>
+                            <div id="t2">
+                                <label>To : <br><input type="date" placeholder="To"></label>
+                            </div>
+                        </div>
+                        <div id="d3">
+                            <div id="f3">
+                                <label>From : <input type="date"> </label>
+                            </div>
+                            <div id="t3">
+                                <label>To : <br><input type="date" placeholder="To"></label>
+                            </div>
+                        </div>
+                        <div id="d4">
+                            <div id="f4">
+                                <label>From : <input type="date"> </label>
+                            </div>
+                            <div id="t4">
+                                <label>To :<br> <input type="date" placeholder="To"></label>
+                            </div>
+                        </div>
+                        <div id="d5">
+                            <div id="f5">
+                                <label>From : <input type="date"></label>
+                            </div>
+                            <div id="t5">
+                                <label>To :<br> <input type="date" placeholder="To"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="button">
+                <button  id="btn" mat-raised-button color="primary" *ngIf="!getparamid" (click)="userSubmit()">Save</button>
+                <button mat-raised-button color="primary" id="editBtn" *ngIf="getparamid" (click)="userUpdate()" >Update</button>
+            </div>
+        </form>
+    </div>
+    </mat-tab>
+    <mat-tab label="Process" *ngIf="process" >
+        <h1> Process is Still Processing </h1>
+    </mat-tab>
+    <mat-tab label="Albums" *ngIf="albums">
+        <h1> --- Albums are Loading--- </h1>
+    </mat-tab>
+    <mat-tab label="Otobox" *ngIf="otobox">
+        <h1> --- OtoBox is still in Processing --- </h1>
+    </mat-tab>
+    <mat-tab label="VMS" *ngIf="vms">
+        <h1> --- VMS is still in Processing --- </h1>
+    </mat-tab>
+    <mat-tab label="Tally" *ngIf="tally">
+        <div id="Tallymain">
+            <div id="CustomerTallyDetails" [class.mat-elevation-z8]="isActive">
+                <h5 id="tally"> Customer Tally Details </h5>
+                <div id="cus">
+                    <div id="tally1">
+                        <label>Tally User name :</label>
+                        <input type="text" placeholder="Enter the Tally UserName">
+                    </div>
+                    <div id="tally2">
+                        <label>Tally User email id :</label>
+                        <input type="text" placeholder="Enter the Tally User email id">
+                    </div>
+                    <div id="tally3">
+                        <label>Tally License info :</label>
+                        <input type="text" placeholder="Enter the Tally License info">
+                    </div>
+                    <div id="tally4">
+                        <label>Tally User name :</label>
+                        <input type="text" placeholder="Enter the Tally User name ">
+                    </div>
+                    <div id="tally5">
+                        <label>Customer Logo upload :</label>
+                        <input id="file1" type="file">
+                    </div>
+                    <div id="tally6">
+                        <label>Tally Setting file : </label>
+                        <input id="file2" type="file">
+                    </div>
+                    <div id="tally7">
+                        <label>Tally Data file :</label>
+                        <input id="file3" type="file">
+                    </div>
+                    <div id="button">
+                        <button mat-raised-button color="primary"><b>Save</b></button>
+                        <button mat-raised-button color="primary"><b>Update</b></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </mat-tab>
+</mat-tab-group>

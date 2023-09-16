@@ -1,0 +1,44 @@
+<div id="all">
+    <!-- <div id="logo" >
+        <img [class.mat-elevation-z8]="isActive" width="1920" height="644" src="https://seppam.com/wp-content/uploads/2023/08/seppam-new-black-01.png"
+            class="attachment-full lazyloaded" alt=""
+            data-src="https://seppam.com/wp-content/uploads/2023/08/seppam-new-black-01.png" decoding="async">
+    </div> -->
+    <div id="main">
+        <div id="container" [class.mat-elevation-z8]="isActive">
+            <form (ngSubmit)="login()">
+                <div id="form">
+                    <div id="head1" [class.mat-elevation-z8]="isActive">
+                        Please Enter your login details
+                    </div><br>
+                    <div id="mail">
+                        <mat-form-field class="login">
+                            <mat-label class="lab">Enter your email</mat-label>
+                            <input matInput [(ngModel)]="email" required [ngModelOptions]="{standalone: true}"
+                                autofocus>
+                            <mat-error *ngIf="valemail.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+                    </div><br>
+                    <div id="pass">
+                        <mat-form-field class="login">
+                            <mat-label class="lab">Password</mat-label>
+                            <input matInput type="password" [(ngModel)]="password" required
+                                [type]="hide? 'password' : 'text'" [ngModelOptions]="{standalone: true}">
+                            <i class="material-icons" matSuffix (click)="hide=!hide">
+                                {{hide ? 'visibility': 'visibility_off'}}
+                            </i>
+                            <!-- <mat-error *ngIf='password.touched && password.invalid'> please enter the password </mat-error> -->
+                        </mat-form-field>
+                    </div><br>
+                    <button mat-raised-button id="btn" type="submit" color="primary">
+                        <span *ngIf="progress" class="spinner-border spinner-border-sm mr-1"></span>
+                        Login
+                    </button>
+                    <p *ngIf="successmsg"><b>{{successmsg}}</b></p>
+                    <p *ngIf="errmsg" style="color: red;"><b>{{errmsg}}</b></p>
+                </div>
+            </form>
+            <a mat-raised-button class="btn" href="/" >Back</a>
+        </div>
+    </div>
+</div>

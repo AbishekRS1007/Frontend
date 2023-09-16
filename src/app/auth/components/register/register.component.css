@@ -1,0 +1,207 @@
+#RegistrationBox {
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+    font-size: large;
+    background-color: white;
+    width: 600px;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 2%;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+
+}
+
+#Registration {
+    display: flex;
+    width: 300px;
+    height: 30px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    color: orange;
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1%;
+
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+}
+
+
+
+#AdministratorDetailsBox {
+    display: flex;
+    height: 250px;
+    flex-direction: column;
+    font-size: large;
+    background-color: white;
+    width: 600px;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 2%;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+}
+#administration{
+    display: flex;
+    width: 300px;
+    height: 30px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    color: orange;
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1%;
+}
+#module{
+    display: flex;
+    width: 300px;
+    height: 30px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    color: orange;
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+#subscription{
+    display: flex;
+    width: 300px;
+    height: 30px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    color: orange;
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+h5 {
+    color: orange;
+}
+
+#ModuleSelectionBox {
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    font-size: large;
+    background-color: white;
+    width: 600px;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 2%;
+    flex-wrap:wrap;
+    justify-content: space-evenly ;
+}
+#d1,
+#d2,
+#d3,
+#d4,
+#d5 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: fit-content;
+}
+
+#firstrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#secondrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#tally{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 30px;
+    background-color: blueviolet;
+    border-radius: 10px;
+    color: orange;
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+#SubcriptionPeriod {
+    display: flex;
+    height: 300px;
+    flex-direction: column;
+    font-size: large;
+    background-color: white;
+    width: 600px;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 2%;
+    justify-content: space-evenly ;
+}
+
+#button {
+    display: flex;
+    justify-content: space-evenly;
+    width: 150px;
+    margin-left: 45%;
+    margin-top: 1%;
+    height: 60px;
+}
+
+button {    
+    border-radius: 11px;
+    width: 150px;
+    height: 50px;
+    font-size:larger;
+    font-weight: bold;
+}
+#tally1, #tally2, #tally3, #tally4, #tally5, #tally6, #tally7{
+    display: flex;
+}
+#sub{
+    display: flex;
+    flex-direction: column;
+}
+#cus{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 450px;
+}
+#Tallymain{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+#CustomerTallyDetails {
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    justify-content: space-evenly;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    margin-top: 2%;
+    border-radius: 10px;
+    align-items: center;
+}
+#file1, #file2, #file3{
+    display: inline-block;
+    width: 200px;
+    font-size: medium;
+}
